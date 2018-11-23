@@ -38,7 +38,7 @@ class AccountService {
 	public List<Account> getAccounts() {
 		Message<String> msg = MessageBuilder.withPayload("John").build();
 //		this.source.output().send(msg);
-		return Arrays.asList(new Account[] {new Account("")});
+		return Arrays.asList(new Account[] {new Account("12321")});
 	}
 }
 
