@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 import java.util.List;
 
-@EnableBinding(Source.class)
+//@EnableBinding(Source.class)
 @EnableDiscoveryClient
 @SpringBootApplication
 public class AccountserviceApplication {
@@ -31,13 +31,13 @@ class AccountService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	@Autowired
-	private Source source;
+//	@Autowired
+//	private Source source;
 
 	@RequestMapping("/accounts")
 	public List<Account> getAccounts() {
 		Message<String> msg = MessageBuilder.withPayload("John").build();
-		this.source.output().send(msg);
+//		this.source.output().send(msg);
 		return Arrays.asList(new Account[] {new Account("")});
 	}
 }
