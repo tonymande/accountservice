@@ -36,7 +36,7 @@ class AccountService {
 
 	@RequestMapping("/accounts")
 	public List<Account> getAccounts() {
-		Message<String> msg = MessageBuilder.withPayload("John").build();
+		Message<String> msg = MessageBuilder.withPayload("Bla").build();
 //		this.source.output().send(msg);
 		return Arrays.asList(new Account[] {new Account("12321")});
 	}
